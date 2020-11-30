@@ -19,13 +19,11 @@ jobs:
           - scenario: "all 2500"
           - scenario: "all 5000"
           - scenario: "all 10000"
-
           - scenario: "uniform 5000 100"
           - scenario: "uniform 5000 200"
           - scenario: "uniform 5000 250"
           - scenario: "uniform 5000 500"
           - scenario: "uniform 5000 1000"
-
           - scenario: "random 5000 5"
           - scenario: "random 5000 10"
           - scenario: "random 5000 20"
@@ -41,7 +39,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install dependencies
-      run: npm install
+      run: npm install && npm i -g ts-node
     - name: Create scenario
       run: ts-node run.ts ${{ matrix.scenario }}
     - name: Build & Test
