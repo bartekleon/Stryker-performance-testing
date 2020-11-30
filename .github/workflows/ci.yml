@@ -30,7 +30,7 @@ jobs:
           - scenario: "random 5000 40"
           - scenario: "random 5000 80"
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v1
