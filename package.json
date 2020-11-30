@@ -1,7 +1,7 @@
 {
-  "name": "@kmdrgroch/big-math",
-  "version": "2.3.0",
-  "description": "Math library for big numbers",
+  "name": "stryker-performance-testing",
+  "version": "1.0.0",
+  "description": "A project to test how does Stryker handle different scenarios of files number and size.",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf \"+(test|src)/**/*+(.d.ts|.js|.map)\"",
