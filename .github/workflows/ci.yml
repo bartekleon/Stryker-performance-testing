@@ -12,24 +12,23 @@ jobs:
       fail-fast: false
       matrix:
         node-version: [14.x]
-        include:
-          - scenario:
-            - "all 50"
-            - "all 250"
-            - "all 500"
-            - "all 2500"
-            - "all 5000"
-            - "all 10000"
-            - "uniform 5000 100"
-            - "uniform 5000 200"
-            - "uniform 5000 250"
-            - "uniform 5000 500"
-            - "uniform 5000 1000"
-            - "random 5000 5"
-            - "random 5000 10"
-            - "random 5000 20"
-            - "random 5000 40"
-            - "random 5000 80"
+        scenario:
+          - "all 50"
+          - "all 250"
+          - "all 500"
+          - "all 2500"
+          - "all 5000"
+          - "all 10000"
+          - "uniform 5000 100"
+          - "uniform 5000 200"
+          - "uniform 5000 250"
+          - "uniform 5000 500"
+          - "uniform 5000 1000"
+          - "random 5000 5"
+          - "random 5000 10"
+          - "random 5000 20"
+          - "random 5000 40"
+          - "random 5000 80"
 
     runs-on: windows-latest
 
