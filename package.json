@@ -1,0 +1,32 @@
+{
+  "name": "@kmdrgroch/big-math",
+  "version": "2.3.0",
+  "description": "Math library for big numbers",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf \"+(test|src)/**/*+(.d.ts|.js|.map)\"",
+    "full-clean": "npm run clean && rimraf .nyc_output coverage reports docs .stryker-tmp",
+    "prebuild": "npm run full-clean",
+    "build": "tsc -p .",
+    "mutate": "stryker run",
+    "test": "nyc mocha"
+  },
+  "author": "kmdrGroch",
+  "license": "MIT",
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "1.0.1",
+    "@stryker-mutator/core": "4.1.2",
+    "@stryker-mutator/mocha-runner": "4.1.2",
+    "@stryker-mutator/typescript-checker": "4.1.2",
+    "@types/chai": "4.2.14",
+    "@types/mocha": "8.0.4",
+    "@types/node": "^14.14.10",
+    "chai": "4.2.0",
+    "mocha": "8.2.1",
+    "nyc": "15.1.0",
+    "rimraf": "3.0.2",
+    "source-map-support": "0.5.19",
+    "ts-node": "9.0.0",
+    "typescript": "4.1.2"
+  }
+}
