@@ -101,9 +101,15 @@ export const scenarioUniformlyDistributed = (size: number, distribution: number)
  * @param filesNumber how many files there will be
  */
 export const scenarioRandomlyDistributed = (size: number, filesNumber: number) => {
-  for (const distribution of randomDistribution(size, filesNumber)) {
-    const filename = UID();
-    saveToSrc(filename, createSourceFile(distribution));
-    saveToTest(filename, createTestFile(distribution));
+  for(;;) {
+    const distribution = randomDistribution(size, filesNumber);
+    if(!distribution.includes(0)) {
+      for (const value of distribution) {
+        const filename = UID();
+        saveToSrc(filename, createSourceFile(value));
+        saveToTest(filename, createTestFile(value));
+      }
+      return;
+    }
   }
 };
