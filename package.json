@@ -8,7 +8,7 @@
     "full-clean": "npm run clean && rimraf .nyc_output coverage reports docs .stryker-tmp",
     "prebuild": "npm run full-clean",
     "build": "tsc -p .",
-    "mutate": "stryker run",
+    "mutate": "stryker run > results.txt",
     "test": "nyc mocha"
   },
   "author": "kmdrGroch",
