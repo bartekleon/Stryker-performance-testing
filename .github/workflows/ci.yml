@@ -8,6 +8,7 @@ on:
 
 jobs:
   build_and_test:
+    timeout-minutes: 1440
     strategy:
       fail-fast: false
       matrix:
